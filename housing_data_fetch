@@ -1,0 +1,55 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "11e2d12a-6ef5-48dc-af56-b4086bb02969",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''\n",
+    "Import California Housing Data\n",
+    "'''\n",
+    "\n",
+    "from sklearn.datasets import fetch_california_housing\n",
+    "\n",
+    "california_housing = fetch_california_housing(as_frame=True)\n",
+    "\n",
+    "(\n",
+    "    california_housing.data\n",
+    "    .assign(MedianHouseValue=california_housing.target)\n",
+    "    .to_csv('california-housing.csv', index=False)\n",
+    ")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9530bcc8-4e6e-49e3-b7a7-0548520bf6ea",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.23"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
